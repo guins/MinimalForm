@@ -127,7 +127,9 @@
 			// enter
 			if( keyCode === 13 ) {
 				ev.preventDefault();
-				self._nextQuestion();
+				if( !self.isFilled ) {
+					self._nextQuestion();
+				}
 			}
 		} );
 	};
