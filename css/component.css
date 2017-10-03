@@ -40,7 +40,8 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 2.35em;
+	// height: 2.35em;
+	height: calc(100% - 1.35em);
 }
 
 .questions li {
@@ -98,7 +99,8 @@
 }
 
 /* Input field */
-.questions input {
+.questions input,
+.questions textarea {
 	display: block;
     margin: 0.3em 0 0 0;
     padding: 0.2em 1em 0.5em 0.7em;
@@ -114,12 +116,23 @@
     height: 2.1em;
 }
 
+.questions input {
+	height: 2.1em;
+}
+
+.questions textarea {
+	height: 4.2em;
+}
+
 .questions .current input,
-.no-js .questions input {
+.questions .current textarea,
+.no-js .questions input
+.no-js .questions textarea {
 	opacity: 1;
 }
 
 .questions input:focus,
+.questions textarea:focus,
 .simform button:focus {
 	outline: none;
 }
